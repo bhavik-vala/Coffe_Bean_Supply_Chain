@@ -1,0 +1,41 @@
+<form class="container">
+  <fieldset>
+    <legend>Register</legend>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" #name class="form-control" value="John Doe" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+      <small id="nameHelp" class="form-text text-muted">Your Full name.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" #mail class="form-control" value="johndoe@domain.com" id="exampleInputEmail1"
+        aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" #password class="form-control" value="password" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="actor">Actor</label>
+      <select class="form-control" #actor>
+        <option *ngFor="let actor of actors;" [value]="actor">{{actor}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" #location class="form-control" value="New York" aria-describedby="locationHelp" placeholder="Enter Location">
+      <small id="locationHelp" class="form-text text-muted">Your registered location.</small>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" #address class="form-control" value="Denburg" aria-describedby="addressHelp" placeholder="Enter Address">
+      <small id="addressHelp" class="form-text text-muted">Your registered address.</small>
+    </div>
+    <div *ngIf="response" class="alert alert-dismissible alert-danger">
+      <strong>{{ response }}</strong>
+
+    </div>
+    <button type="button" (click)="onSubmit(name,mail,password,actor,location,address)" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>

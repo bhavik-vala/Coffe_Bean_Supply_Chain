@@ -1,0 +1,75 @@
+<button class="btn btn-secondary" *ngIf="user?.actor=='FARMER'" (click)="onHarvest()">
+  <div style="text-align: right;background:url('https://cdn1.iconfinder.com/data/icons/freeline/32/add_cross_new_plus_create-512.png');height: 20px;width: 100px;background-size: contain;background-repeat: no-repeat;">
+    <h6 style="align-self: center;
+  line-height: 20px;">Harvest</h6>
+  </div>
+</button>
+<table style="margin-top: 1em;box-shadow: 2px -2px 4px 0px #FFF;
+margin-top: 1em;border: 1px solid #666" class="table table-hover">
+  <thead>
+    <tr class="table-active">
+      <th scope="col">ID</th>
+      <th scope="col">Last Update</th>
+      <th scope="col">Harvest</th>
+      <th scope="col">Certificate</th>
+      <th scope="col">Shipping</th>
+      <th scope="col">Warehouse</th>
+      <th scope="col">Roasting</th>
+      <th scope="col">Packager</th>
+      <th scope="col">Wholesaler</th>
+      <th scope="col">Distributor</th>
+      <th scope="col">Retailer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-light" *ngFor="let bean of beans;let i=index;" (contextmenu)="onRightClick(bean?.data)">
+      <th scope="row" (click)="gotoBean(bean?.data?.id)" style="cursor: pointer;">{{ bean?.data?.id }}</th>
+      <td>{{ bean?.data[bean?.data?.stage]?.on | date | uppercase }}</td>
+      <td><span [ngClass]="getStatus(bean['data'],'harvest')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'certificate')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'shipping')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'warehouse')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'roasting')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'packaging')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'wholesaler')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'distributor')" class="badge badge-pill ">&nbsp;</span></td>
+      <td><span [ngClass]="getStatus(bean['data'],'retailer')" class="badge badge-pill ">&nbsp;</span></td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="showModal" class="context-modal-container">
+</div>
+<div *ngIf="showModal" class="context-modal-content">
+  <div class="close" (click)="showModal=false">
+    <img width="30px" src="https://img.icons8.com/color/260/close-window.png" alt="close X">
+  </div>
+  <div class="body" [ngSwitch]="formToShow">
+    <app-harvest-form *ngSwitchCase="formSelectionList[0]"></app-harvest-form>
+    <app-certify-form [bean]="bean" *ngSwitchCase="formSelectionList[1]">
+    </app-certify-form>
+    <app-shipping-form [bean]="bean" *ngSwitchCase="formSelectionList[2]">
+    </app-shipping-form>
+    <app-receive-shipment-form [bean]="bean" *ngSwitchCase="formSelectionList[3]">
+    </app-receive-shipment-form>
+    <app-roasting-form [bean]="bean" *ngSwitchCase="formSelectionList[4]">
+    </app-roasting-form>
+    <app-packaging-form [bean]="bean" *ngSwitchCase="formSelectionList[5]">
+    </app-packaging-form>
+    <app-sell-wholesaler-form [bean]="bean" *ngSwitchCase="formSelectionList[6]">
+    </app-sell-wholesaler-form>
+    <app-sell-distributor-form [bean]="bean" *ngSwitchCase="formSelectionList[7]">
+    </app-sell-distributor-form>
+    <app-sell-retailer-form [bean]="bean" *ngSwitchCase="formSelectionList[8]">
+    </app-sell-retailer-form>
+    <div *ngSwitchCase="formSelectionList[9]" class="jumbotron" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        background-size: cover;
+        background: url('https://4.bp.blogspot.com/-ZE0gfvLGaYU/WYEPSuHE5mI/AAAAAAAAc28/fcCYvyWtzPIpvyVWuU6nljux7-7GCghiQCLcBGAs/s1600/Screen%2BShot%2B2017-08-01%2Bat%2B4.21.37%2BPM.png')
+    ">
+      <h3 class="display-4" style="color:#2fff00;">Completed</h3>
+    </div>
+  </div>
+</div>

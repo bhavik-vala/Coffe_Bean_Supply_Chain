@@ -1,0 +1,10 @@
+<form>
+  <fieldset>
+    <legend>Roast Beans</legend>
+    <div class="form-group">
+      <label for="registrationNumber">Processor Registration Number</label>
+      <input type="text" #registrationNumber value="AP_ROAST_1" class="form-control" id="registrationNumber" placeholder="Enter processor registration number">
+    </div>
+    <button type="button" (click)="onSubmit(registrationNumber)" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>

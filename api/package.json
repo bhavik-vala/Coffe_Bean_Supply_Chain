@@ -1,0 +1,36 @@
+{
+  "name": "coffee-bean-supply-chain-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev-start": "nodemon index.js",
+    "test": "mocha"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "John S",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "async-require": "^1.2.2",
+    "atob": "^2.1.2",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "lokijs": "^1.5.6",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.4.10",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.9",
+    "query-string": "^6.2.0",
+    "request": "^2.88.0",
+    "sawtooth-sdk": "^1.0.5",
+    "uuid": "^3.3.2"
+  }
+}

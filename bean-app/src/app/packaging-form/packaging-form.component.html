@@ -1,0 +1,22 @@
+<form>
+  <fieldset>
+    <legend>Packaging</legend>
+    <div class="form-group">
+      <label for="roastingQuality">Roasting Quality</label>
+      <input type="text" #roastingQuality value="FINE" class="form-control" id="roastingQuality" placeholder="Enter roasting quality">
+    </div>
+    <div class="form-group">
+      <label for="typeOfSeed">Type of Seed</label>
+      <input type="text" #typeOfSeed value="Coco Brown" class="form-control" id="typeOfSeed" placeholder="Enter seed type">
+    </div>
+    <div class="form-group">
+      <label for="coffeeBeanFamily">Coffee Bean Family</label>
+      <input type="text" #coffeeBeanFamily value="Coco Va" class="form-control" id="coffeeBeanFamily" placeholder="Enter coffee bean family">
+    </div>
+    <div class="form-group">
+      <label for="temperature">Temperature</label>
+      <input type="email" #temperature value="10deg" class="form-control" id="temperature" placeholder="Enter temperature">
+    </div>
+    <button type="button" (click)="onSubmit(typeOfSeed,coffeeBeanFamily,temperature,roastingQuality)" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>

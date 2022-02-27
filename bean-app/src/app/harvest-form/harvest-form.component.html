@@ -1,0 +1,18 @@
+<form>
+  <fieldset>
+    <legend>Harvest</legend>
+    <div class="form-group">
+      <label for="coffeeBeanType">Coffee Bean Type</label>
+      <input type="email" #coffeeBeanType value="Coco Type" class="form-control" id="coffeeBeanType" placeholder="Enter coffee bean type">
+    </div>
+    <div class="form-group">
+      <label for="temperature">Temperature</label>
+      <input type="email" #temperature value="20deg" class="form-control" id="temperature" placeholder="Enter temperature">
+    </div>
+    <div class="form-group">
+      <label for="humidity">Humidity</label>
+      <input type="email" #humidity value="2%" class="form-control" id="humidity" placeholder="Enter humidity">
+    </div>
+    <button type="button" (click)="onSubmit(coffeeBeanType,temperature,humidity)" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>

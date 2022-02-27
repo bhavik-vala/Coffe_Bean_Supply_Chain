@@ -1,0 +1,166 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic'
+  rel='stylesheet' type='text/css'>
+
+<!-- The Timeline -->
+
+<ul class="timeline">
+
+  <li>
+    <div class="direction-r">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('harvest')">Harvest</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.harvest?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.harvest">
+<label>Registration Number    </label><a href="#" class="d-value">{{beanData?.harvest?.registrationNumber}}</a>
+<label>Farmer Name            </label><span class="d-value">{{beanData?.harvest?.farmerName}}</span>
+<label>Coffee Bean Type       </label><span class="d-value">{{beanData?.harvest?.coffeeBeanType}}</span>
+<label>Temperature            </label><span class="d-value">{{beanData?.harvest?.temperature}}</span>
+<label>Humidity               </label><span class="d-value">{{beanData?.harvest?.humidity}}</span>
+          </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-l">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('certificate')">Certificate</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.certificate?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.certificate">
+<label>Registration Number    </label><a href="#" class="d-value">{{beanData?.certificate?.registrationNumber}}</a>
+<label>Certifier Name         </label><span class="d-value">{{beanData?.certificate?.certifierName}}</span>
+<label>Type of Seed           </label><span class="d-value">{{beanData?.certificate?.typeOfSeed}}</span>
+<label>Coffee Bean Family     </label><span class="d-value">{{beanData?.certificate?.coffeeBeanFamily}}</span>
+<label>Fertilizer Used        </label><span class="d-value">{{beanData?.certificate?.fertilizerUsed}}</span>
+<label>Farm Address           </label><span class="d-value">{{beanData?.certificate?.farmAddress}}</span>
+            </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-r">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('shipping')">Shipping</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.shipping?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.shipping">
+<label>Departure On           </label><span class="d-value">{{beanData?.shipping?.timeOfDeparture}}</span>
+<label>Estimated Arrival      </label><span class="d-value">{{beanData?.shipping?.estimatedTimeOfArrival}}</span>
+<label>Dispatch Details       </label><span class="d-value">{{beanData?.shipping?.dispatchDetails}}</span>
+<!-- <label>Temperature            </label><span class="d-value">{{beanData?.shipping?.tracking}}</span> -->
+            </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-l">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('warehouse')">Warehouse</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.warehouse?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.warehouse">
+<label>Name                   </label><span class="d-value">{{beanData?.warehouse?.name}}</span>
+<label>Location               </label><span class="d-value">{{beanData?.warehouse?.location}}</span>
+<label>Arrival Mode           </label><span class="d-value">{{beanData?.warehouse?.arrivalMode}}</span>
+<label>Storage Condition      </label><span class="d-value">{{beanData?.warehouse?.storageCondition}}</span>
+              </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-r">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('roasting')">Roasting</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.roasting?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.roasting">
+<label>Registration Number    </label><a href="#" class="d-value">{{beanData?.roasting?.registrationNumber}}</a>
+<label>Roasting Quality       </label><span class="d-value">{{beanData?.roasting?.roastingQuality}}</span>
+<label>Temperature            </label><span class="d-value">{{beanData?.roasting?.temperature}}</span>
+  <!-- <label>Temperature            </label><span class="d-value">{{beanData?.shipping?.tracking}}</span> -->
+              </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-l">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('packaging')">Packaging</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.packaging?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.packaging">
+<label>Batch ID               </label><span class="d-value">{{beanData?.packaging?.batchId}}</span>
+<label>Coffee Bean Family     </label><span class="d-value">{{beanData?.packaging?.coffeeBeanFamily}}</span>
+<label>Type of Seed           </label><span class="d-value">{{beanData?.packaging?.typeOfSeed}}</span>
+                </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-r">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('wholesaler')">Wholesaler</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.wholesaler?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.wholesaler">
+<label>Name                   </label><span class="d-value">{{beanData?.wholesaler?.name}}</span>
+<label>Registration Number    </label><a href="#" class="d-value">{{beanData?.wholesaler?.registrationNumber}}</a>
+                </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-l">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('distributor')">Distributor</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.distributor?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.distributor">
+<label>Name                   </label><span class="d-value">{{beanData?.distributor?.name}}</span>
+<label>Registration Number    </label><a href="#" class="d-value">{{beanData?.distributor?.registrationNumber}}</a>
+        </pre>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="direction-r">
+      <div class="flag-wrapper">
+        <span class="flag" [ngClass]="getStatus('retailer')">Retailer</span>
+        <span class="time-wrapper">
+          <span class="time">{{beanData?.retailer?.on}}</span>
+        </span>
+      </div>
+      <div class="desc">
+        <pre *ngIf="beanData?.retailer">
+<label>Name                   </label><span class="d-value">{{beanData?.retailer?.name}}</span>
+<label>Registration Number    </label><a href="#" class="d-value">{{beanData?.retailer?.registrationNumber}}</a>
+                  </pre>
+      </div>
+    </div>
+  </li>
+</ul>

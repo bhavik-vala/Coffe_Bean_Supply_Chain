@@ -1,0 +1,13 @@
+<form>
+    <fieldset>
+      <legend>Sell to Distributor</legend>
+      <div class="form-group">
+        <label for="email">Actor</label>
+        <select class="form-control" #email id="email">
+          <option *ngFor="let user of users;" [value]="user?.mail">{{user?.mail}} - {{user?.name}}</option>
+        </select>
+      </div>
+      <button type="button" (click)="onSubmit(email)" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+  

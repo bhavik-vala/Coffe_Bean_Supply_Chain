@@ -1,0 +1,50 @@
+<div class="container">
+  <table class="table table-hover" *ngIf="users?.length">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actor Type</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor="let user of users">
+        <th scope="row">{{user?.name}}</th>
+        <th scope="row">{{user?.mail}}</th>
+        <th scope="row">{{user?.actor}}</th>
+        <td>
+          <button (click)="onApprove(user?.mail)" type="button" class="btn btn-secondary">Approve</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-hover" *ngIf="allUsers?.length">
+    <thead>
+      <tr>
+        <!-- <th scope="col">ID</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actor Type</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor="let user of allUsers">
+        <!-- <th scope="row"><span style="width:100px;text-overflow: ellipsis;">{{user?.id}}</span></th> -->
+        <th scope="row">{{user?.name}}</th>
+        <td scope="row">{{user?.mail}}</td>
+        <td scope="row">{{user?.actor}}</td>
+        <td>
+              <button (click)="onResetPassword(user?.mail)" type="button" class="btn btn-danger">RESET PASSWORD</button>
+            </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="allUsers?.length==0">
+    <p>No users to display</p>
+  </div>
+
+</div>

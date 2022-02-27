@@ -1,0 +1,21 @@
+<form>
+  <fieldset>
+    <legend>Ship</legend>
+    <div class="form-group">
+      <label for="timeOfDeparture">Departure On</label>
+      <input type="date" #dateOfDeparture class="form-control" value="2019-01-08" id="timeOfDeparture" placeholder="Enter departure date time">
+      <input type="time" #timeOfDeparture class="form-control" value="01:01" id="timeOfDeparture" placeholder="Enter departure date time">
+    </div>
+    <div class="form-group">
+      <label for="estimatedTimeOfArrival">Estimated Arrival</label>
+      <input type="date" #estimatedDateOfArrival class="form-control" value="2019-02-08" id="estimatedTimeOfArrival" placeholder="Enter Estimated arrival time">
+      <input type="time" #estimatedTimeOfArrival class="form-control" value="01:01" id="estimatedTimeOfArrival" placeholder="Enter Estimated arrival time">
+    </div>
+    <div class="form-group">
+      <label for="dispatchDetails">Dispatch Details</label>
+      <input type="text" #dispatchDetails value="Disptch Pack ID" class="form-control" id="dispatchDetails" placeholder="Enter dispatch details">
+    </div>
+    <button type="button" (click)="onSubmit(dateOfDeparture,timeOfDeparture,estimatedDateOfArrival,estimatedTimeOfArrival,dispatchDetails)"
+      class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>

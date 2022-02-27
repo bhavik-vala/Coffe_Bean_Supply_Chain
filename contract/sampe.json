@@ -1,0 +1,68 @@
+{
+    "beanId": "1",
+    "stage": "retailer",
+    "harvest": {
+        "farmerName": "Michel",
+        "registrationNumber": "FARM1",
+        "location": "LA New York",
+        "coffeeBeanType": "Cuppa",
+        "temperature": "20degree",
+        "humidity": "3%",
+        "on": "2018-02-13T04:51:49.070Z"
+    },
+    "certificate": {
+        "certifierName": "Michel",
+        "registrationNumber": "CERT1",
+        "typeOfSeed": "Cuppa",
+        "coffeeBeanFamily": "Cuppa",
+        "fertilizerUsed": "PH PA",
+        "farmAddress": "Virginia, LA, New York",
+        "on": "2019-02-13T04:51:49.070Z"
+    },
+    "shipping": {
+        "timeOfDeparture": "2018-02-13T04:51:49.070Z",
+        "estimatedTimeOfArrival": "2018-03-13T04:51:49.070Z",
+        "dispatchDetails": "DS DS Alpino",
+        "tracking": [{
+            "temperature": "20degree",
+            "longitude": "3.44444",
+            "latitude": "3.34444",
+            "on": "2018-02-13T04:51:49.070Z"
+        }],
+        "on": "2018-02-13T04:51:49.070Z"
+    },
+    "warehouse": {
+        "name": "Amul Global Warehouse",
+        "location": "LA New York",
+        "arrivalMode": "Truck",
+        "storageCondition": "COOL",
+        "on": "2018-02-13T04:51:49.070Z"
+    },
+    "roasting": {
+        "registrationNumber": "ROAST1",
+        "roastingQuality": "GOOD",
+        "temperature": "20degree",
+        "on": "2018-02-13T04:51:49.070Z"
+    },
+    "packaging": {
+        "typeOfSeed": "Cuppa",
+        "coffeeBeanFamily": "Cuppa",
+        "batchId": "1",
+        "on": "2018-02-13T04:51:49.070Z"
+    },
+    "wholesaler": {
+        "name": "Martin",
+        "registrationNumber": "WHL1",
+        "on": "2018-04-13T04:51:49.070Z"
+    },
+    "distributor": {
+        "name": "Frank",
+        "registrationNumber": "DIST1",
+        "on": "2018-05-13T04:51:49.070Z"
+    },
+    "retailer": {
+        "name": "Brad",
+        "registrationNumber": "RET1",
+        "on": "2018-06-13T04:51:49.070Z"
+    }
+}

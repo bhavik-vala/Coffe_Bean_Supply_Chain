@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <!-- <h6 class="display-6">{{address}}</h6> -->
+  <!-- <pre>
+    ID: {{ bean['id'] }}      
+    Location: {{ bean['location'] }}
+    Info: {{ bean['info'] }}
+    Processor Location {{ bean['processor']?.location }} Processor ID {{ bean['processor']?.processorRegId }}  
+    Harvested On   {{ bean['harvestedOn'] }}       Harvested By {{ bean['harvestedBy'] }}
+    Transported On {{ bean['transportedOn'] }}       Transported By {{ bean['transportedBy'] }}
+    Transported On {{ bean['soldOn'] }}       Transported By {{ bean['soldBy'] }}
+  </pre> -->
+  <!-- <table>
+    <tbody>
+      <tr *ngFor="let display of displayFormat;">
+        <td *ngFor="let i of display;">
+          <pre>
+            <label>{{ keys[i] | uppercase }}: </label>  {{ bean[keys[i]] }}
+          </pre>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+  <!-- <app-table></app-table> -->
+  <!-- <pre [innerHTML]="bean | json"></pre> -->
+  <h4 style="color:#fa5050">Current Stage: <span style="color:#666">{{ bean?.stage | uppercase }} </span></h4>
+  <h6 style="color:#fa5050">Bean ID: <span style="color:#666">{{ bean?.id | uppercase }} </span></h6>
+  <h6 style="color:#fa5050">Blockchain Address: <a href="#" style="color:#666">{{ bean?.address }} </a></h6>
+  <h6 style="color:#fa5050">Owned By: <a href="#" style="color:#666">{{ bean?.ownedBy | uppercase }} </a></h6>
+  <app-tracking [beanData]="bean"></app-tracking>
+</div>
+<!-- <app-tracking [statusData]="statusData"></app-tracking> -->
